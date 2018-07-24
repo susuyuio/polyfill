@@ -1,4 +1,5 @@
 /**
+ * 0001
  * String.prototype.repeat 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本
  * count 重复次数
  */
@@ -38,6 +39,7 @@ if (!String.prototype.repeat_Su) {
   };
 }
 /**
+ * 0002
  * String.prototype.padStart 在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串
  * @param targetLength 即将填充到的长度，若小于原字符串长度则返回原字符串
  * @param padString （可选）填充字符串，可被截取
@@ -56,6 +58,7 @@ if (!String.prototype.padStart_Su) {
   };
 }
 /**
+ * 0003
  * String.prototype.padEnd 在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串
  * @param targetLength 即将填充到的长度，若小于原字符串长度则返回原字符串
  * @param padString （可选）填充字符串，可被截取
