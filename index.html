@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>polyfill-test</title>
+</head>
+
+<body>
+    <script src="./polyfill.js"></script>
+    <h3>String.prototype.padStart</h3>
+    <p id="padStartTest1">11</p>
+    <p id="padStartTest2">22</p>
+    <p id="padStartTest3">33</p>
+    <p id="padStartTest4">44</p>
+    <p id="padStartTest5">55</p>
+    <h3>String.prototype.padEnd</h3>
+    <p id="padStartTest6">66</p>
+    <p id="padStartTest7">77</p>
+    <p id="padStartTest8">88</p>
+    <p id="padStartTest9">99</p>
+    <p id="padStartTest0">00</p>
+    <h3>String.prototype.repeat</h3>
+    <p id="repeatTest1">11</p>
+    <p id="repeatTest2">22</p>
+    <p id="repeatTest3">33</p>
+    <p id="repeatTest4">44</p>
+    <p id="repeatTest5">55</p>
+    <script>
+        document.getElementById('padStartTest1').innerText = `'susu'+7+'123': ${'susu'.padStart_Su(7, '123')}`;
+        document.getElementById('padStartTest2').innerText = `'susu'+9+'123': ${'susu'.padStart_Su(9, '123')}`;
+        document.getElementById('padStartTest3').innerText = `'susu'+5+'123': ${'susu'.padStart_Su(5, '123')}`;
+        document.getElementById('padStartTest4').innerText = `'susu'+0+'123': ${'susu'.padStart_Su(0, '123')}`;
+        document.getElementById('padStartTest5').innerText = `'susu'+null+'123': ${'susu'.padStart_Su(6, null)}`;
+        console.log('susu'.padStart_Su(8, undefined));
+        document.getElementById('padStartTest6').innerText = `'123'+7+'susu': ${'susu'.padEnd_Su(7, '123')}`;
+        document.getElementById('padStartTest7').innerText = `'123'+9+'susu': ${'susu'.padEnd_Su(9, '123')}`;
+        document.getElementById('padStartTest8').innerText = `'123'+5+'susu': ${'susu'.padEnd_Su(5, '123')}`;
+        document.getElementById('padStartTest9').innerText = `'123'+0+'susu': ${'susu'.padEnd_Su(0, '123')}`;
+        document.getElementById('padStartTest0').innerText = `'123'+null+'susu': ${'susu'.padEnd_Su(6, null)}`;
+        console.log('susu'.padEnd_Su(8, undefined));
+        document.getElementById('repeatTest1').innerText = `'abc'+'0': ${'abc'.repeat_Su(0)}`;
+        document.getElementById('repeatTest2').innerText = `'abc'+'2': ${'abc'.repeat_Su(2)}`;
+        document.getElementById('repeatTest3').innerText = `'abc'+'-0.9': ${'abc'.repeat_Su(-0.9)}`;
+        // document.getElementById('repeatTest4').innerText = `'abc'+'-2.1'': ${'abc'.repeat_Su(-2.1)}`;
+        // document.getElementById('repeatTest5').innerText = `'abc'+'(-)Infinity': ${'abc'.repeat_Su(1/0)}`;
+
+    </script>
+</body>
+
+</html>
